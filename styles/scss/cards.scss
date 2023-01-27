@@ -1,0 +1,141 @@
+@import "./variables.scss";
+
+.slide-container {
+	max-width: 1120px;
+	width: 100%;/* 
+	padding: 40px 0; */
+	.slide-content {
+		margin: 0 40px;
+		overflow: hidden;
+		border-radius: 25px;/* 
+		-webkit-transition: 5s ease 100ms;
+		-moz-transition: 5s ease 100ms;
+		transition: 5s ease 100ms; */
+		.card {
+			border-radius: 25px;
+			background-color: $background-color_1;
+			-webkit-transition: .75s ease 100ms;
+			-moz-transition: .75s ease 100ms;
+			transition: .75s ease 100ms;
+			.image-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 10px 14px;
+				position: relative;
+				row-gap: 5px;
+				padding: 25px 0;
+				.overlay {
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: 100%;
+					background-color: $colorTerciary;
+					border-radius: 25px 25px 0 25px;
+					&::before {
+						content: "";
+						position: absolute;
+						right: 0;
+						bottom: -40px;
+						height: 40px;
+						width: 40px;
+						background-color: $colorTerciary;
+					}
+					&::after {
+						content: "";
+						position: absolute;
+						right: 0;
+						bottom: -40px;
+						height: 40px;
+						width: 40px;
+						background-color: $colorTerciary;
+						border-radius: 0 25px 0 0;
+						background-color: $background-color_1;
+					}
+				}
+				.card-image {
+					position: relative;
+					height: 150px;
+					width: 150px;
+					border-radius: 50%;
+					background: #fff;
+					padding: 3px;
+					.card-img {
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+						border-radius: 50%;
+						border: 4px solid $colorTerciaryLighter;
+					}
+				}
+			}
+			.card-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 10px 6px;
+				.name {
+					font-size: 18px;
+					font-weight: 500;
+					color: $color_1;
+					z-index: 2;
+					margin-bottom:2vh;
+				}
+				.description {
+					font-size: 14px;
+					color: $color_2;
+					text-align: center;
+				}
+				.button {
+					border: none;
+					font-size: 16px;
+					color: $color_3;
+					padding: 8px 16px;
+					background-color: $colorTerciary;
+					border-radius: 6px;
+					margin: 14px;
+					cursor: pointer;
+					transition: all 0.3s ease;
+					&:hover {
+						background: $colorTerciaryLighter;
+					}
+					a{
+						text-decoration: none;
+						color: $backgroundColorPrimary
+					}
+				}
+			}
+			&:hover {
+				box-shadow: 0px 0px 10px $colorTerciary
+			}
+		}
+	}
+}
+
+.swiper-navBtn {
+	color: $colorTerciaryLighter !important;
+	transition: color 0.3s ease;
+	&:hover {
+		color: $colorTerciary;
+	}
+	&::before {
+		font-size: 35px;
+	}
+	&::after {
+		font-size: 35px;
+	}
+}
+.swiper-button-next {
+	right: 0;
+}
+.swiper-button-prev {
+	left: 0;
+}
+.swiper-pagination-bullet {
+	background-color: $colorTerciaryLighter;
+	opacity: 1;
+}
+.swiper-pagination-bullet-active {
+	background-color: $colorTerciary;
+}

@@ -1,0 +1,56 @@
+@media screen and (max-width: 767px) and (min-width: 200px) and (orientation: portrait) {
+    .textB {
+        padding-right: 10vw;
+    }
+    .navbar {
+        justify-content: space-between;
+        .container-fluid {
+            width: 100% !important;
+            h1 {
+                padding: 0 !important;
+            }
+        }
+    }
+    .presentationHead {
+        &:hover {
+            text-shadow: 0px 0px 0px $colorSecondary !important;
+        }
+    }
+    main,
+    .landing {
+        display: flex !important;
+        flex-direction: column-reverse;
+        .presentation {
+            max-width: 90vw !important;
+        }
+
+        img {
+            max-width: 90vw !important;
+            max-height: 90vh !important;
+        }
+    }/* 
+    .card-content{
+        min-height:393.19px
+    } */
+    .gradient-border {
+        /* 
+        margin: 0; */
+        width: 80vw; /* 
+        transform: translate(10%, 0%); */
+        .slider {
+            height: 100px;
+            width: 100%;
+            margin: 0;
+            left: 0%;
+            position: absolute;
+        }
+        &::after {
+            width: 100%;
+            left: 0%;
+            position: absolute;
+        }
+    }
+    .formulario {
+        width: 90vw !important;
+    }
+}

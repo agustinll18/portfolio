@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$fontHeadings: "Merriweather", serif;
+$fontBody: "Archivo", sans-serif;
+$backgroundColorPrimary: #f8f9fa;
+$colorSecondary: rgb(47,95,199);
+$fontColorPrimary: rgb(30, 29, 29);
+$colorTerciary:rgb(169, 0, 129);
+$colorTerciaryDarker:rgb(121, 3, 93);
+$colorTerciaryLighter:rgb(231, 77, 195);
+
+$color_1: #333;
+$color_2: #707070;
+$color_3: #fff;
+$background-color_1: #fff;
+* {/* 
+    color: $fontColorPrimary; */
+    font-family: $fontBody;
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontHeadings !important;/* 
+    color: $fontColorPrimary; */
+    font-weight: bolder;
+    margin: 0px;
+}
+.presentationHead {
+    transition: 0.75s ease-in-out;
+    font-family: $fontHeadings !important;
+    color: $fontColorPrimary;
+    &:hover { 
+        text-shadow: 7px 7px 1px $colorSecondary;
+    }
+}
+p {
+    letter-spacing: 0.1em;
+}
+.tecnologies{
+    font-size: clamp(0.8rem, 18px, 4em);
+    font-weight: 700;
+
+}
+.react{
+    color: #09d9fe;
+}
+.scss{
+    color: #c76395;
+}
+.bootstrap{
+    color: #6c10ed;
+}
+.js{
+    color: #e8d44d;
+}
+.jquery{
+    color: #4bb102;
+}
+.fr{
+    color: #000000;
+}
+.destacado {
+    color: $colorSecondary;
+    font-size: clamp(0.8rem, 28px, 4em);
+    font-weight: 900;
+}
+/* col */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-1 {
+    width: 8.33%;
+    margin: auto;
+}
+.col-2 {
+    width: 16.66%;
+    margin: auto;
+}
+.col-3 {
+    width: 25%;
+    margin: auto;
+}
+.col-4 {
+    width: 33.33%;
+    margin: auto;
+}
+.col-5 {
+    width: 41.66%;
+    margin: auto;
+}
+.col-6 {
+    width: 50%;
+    margin: auto;
+}
+.col-7 {
+    width: 58.33%;
+    margin: auto;
+}
+.col-8 {
+    width: 66.66%;
+    margin: auto;
+}
+.col-9 {
+    width: 75%;
+    margin: auto;
+}
+.col-10 {
+    width: 83.33%;
+    margin: auto;
+}
+.col-11 {
+    width: 91.66%;
+    margin: auto;
+}
+.col-12 {
+    width: 100%;
+    margin: auto;
+}

@@ -1,0 +1,103 @@
+@import "./variables.scss";
+@mixin gradientBlanco {
+    background: transparent;
+}
+
+$velocidad: 40s;
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 9.59));
+    }
+}
+.gradient-border {
+    margin:12vh auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: white;
+    background: $backgroundColorPrimary !important;
+    border-radius: 12px;
+
+    .slider {
+        background: rgba(255, 255, 255, 0.331);
+        box-shadow: 0 10px 20px 2px $colorTerciary;
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        justify-content: center;
+        border-radius: 12px;
+
+        &::before,
+        &::after {
+            @include gradientBlanco;
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+
+        &::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+
+        &::before {
+            left: 0;
+            top: 0;
+        }
+
+        .slide-track {
+            animation: scroll $velocidad linear infinite;
+            display: flex;
+            width: calc(250px * 15);
+            justify-content: center;
+        }
+
+        .slide {
+            margin: auto;
+            height: 100px;
+            width: 250px;
+            position: relative;
+
+            img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(20deg,$colorTerciary, rgb(255, 255, 255));
+        background-size: 300% 300%;
+        background-position: 0 50%;
+        border-radius: 6px;
+        animation: gradiente 4s alternate infinite;
+    }
+}
+
+@keyframes gradiente {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@mixin gradientNight {
+    background: linear-gradient(to right, rgba(84, 84, 84, 0) 0%,$colorTerciary 100%);
+}

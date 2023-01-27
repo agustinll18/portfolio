@@ -1,0 +1,57 @@
+@import "./variables";
+/* SHADOW COLOR */
+@keyframes breathing {
+    0% {
+        -webkit-filter: drop-shadow(1px 1px 25px $colorTerciary);
+    }
+    50% {
+        -webkit-filter: drop-shadow(1px 1px 25px $colorSecondary);
+    }
+}
+
+/* presentation */
+.presentationHead {
+    transition: 0.75s ease-in-out;
+    font-family: $fontHeadings !important;/* 
+    color: $fontColorPrimary; */
+    &:hover {
+        text-shadow: 7px 7px 1px $colorSecondary;
+    }
+}
+/* typing */
+.typing-text {
+    color: $colorSecondary;
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.typing-text::after {
+    content: "|";
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+/* NAVBAR CHANGE COLOR ON SCORLL */
+.scrolled {
+    background: $colorTerciaryDarker !important;
+    a {
+        filter: invert(1);
+    }
+    .darkM,.lightM{
+        filter: invert(1);
+    }
+}
+
+/* card blur */
+.swiper-wrapper:hover #card:not(:hover) {
+    filter: blur(1.5px);
+}

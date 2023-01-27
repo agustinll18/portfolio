@@ -1,0 +1,87 @@
+/* body {
+    div.darkmode {
+        display: inline-block; //1
+        font-size: 2rem; //2 //3
+        cursor: pointer; //4
+    }
+    &.dark .darkmode .lightM,
+    &:not(.dark) .darkmode .darkM {
+        display: none; //5
+    }
+}
+body div.darkmode {
+    display: inline-block;
+    padding-right: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+body.dark .darkmode .lightM,
+body:not(.dark) .darkmode .darkM {
+    display: none;
+}
+*/
+@import"./variables.scss";
+.dark {
+    background: $fontColorPrimary;
+    color: $backgroundColorPrimary !important;
+    .navbar-toggler-icon,
+    .navbar-toggler {
+        filter: invert(1);
+    }
+    .presentationHead {
+        color: $backgroundColorPrimary !important;
+    }
+    /* .darkM {
+        background: transparent;
+        color: $fontColorPrimary;
+    } */
+    #textB {
+        background: $fontColorPrimary;
+    }
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    align-self: center;
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color_2;
+        border-radius: 30px;
+        -webkit-transition: 0.4s;
+        transition: 0.4s; 
+    }
+    input:checked + .slider {
+        background:  url("https://static.vecteezy.com/system/resources/thumbnails/000/556/930/small/RR-v-jan-2019-135.jpg");
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
